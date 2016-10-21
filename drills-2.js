@@ -9,7 +9,7 @@
 //
 ​
 var realNinjas = [
-  'Chuck Norris',
+  'Chuck Norris', // spilt these //
   'Jackie Chan',
   'Lucy Liu',
   'Billy Blanks',
