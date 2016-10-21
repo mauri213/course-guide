@@ -3,13 +3,12 @@ function addOne (number) {
 	return number + 1;
 }
 console.assert(addOne(10) === 11);
-	
 // write a function called doubleNum() that takes a number as input and returns the double of the number. 
 function doubleNum (number) {
 	return number * 2;
 }
 console.assert(doubleNum(10) === 20);
-// write a function called isNegative(). it should take a single, numerical input. it should output true if the number is negative, and false if the number is positive.
+// // write a function called isNegative(). it should take a single, numerical input. it should output true if the number is negative, and false if the number is positive.
 function isNegative(number) {
 	if (number < 0) {
 		return true;
@@ -17,15 +16,28 @@ function isNegative(number) {
 		return false;
 	}
 }
-
-console.assert(isNegative(20) === true);
-console.assert(isNegative(9999999) === false);
+console.assert(isNegative(1) === false );
+console.assert(isNegative(-9999999) === true);
 // // modify isNegative() so that it only accepts numerical input. it should return the string, "input must be a number," if bad input has been submitted.
 
-// write a function called isEven() that tells whether a number is even or not. 
-
+// // write a function called isEven() that tells whether a number is even or not. 
+function isEven(number) {
+	if (number % 2 === 0) {
+		return true; //"is even"
+	} else {
+		return false; //"is uneven"
+	}
+}
+console.assert(isEven(3) === false);
 // write a function called isBig() that tells whether a number is greater than 10,000 or not.
-
+function isBig(number) {
+	if (number > 10000) {
+		return true;
+	} else {
+		return false;
+	}
+}
+console.assert(isBig(1000000) === true);
 // write a function called addPeriod(). it should take as input a string, and return a copy of that string with a period on the end. 
 
 // write a function called sayItTwice(). it should take as input a string ('bubble') and return that string repeated twice, with a space between ('bubble bubble').
