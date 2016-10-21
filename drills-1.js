@@ -1,10 +1,26 @@
 // write a function called addOne() that takes a number as input and returns a new number that's one more than the input.
-
+function addOne (number) {
+	return number + 1;
+}
+console.assert(addOne(10) === 11);
+	
 // write a function called doubleNum() that takes a number as input and returns the double of the number. 
-
+function doubleNum (number) {
+	return number * 2;
+}
+console.assert(doubleNum(10) === 20);
 // write a function called isNegative(). it should take a single, numerical input. it should output true if the number is negative, and false if the number is positive.
+function isNegative(number) {
+	if (number < 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
-// modify isNegative() so that it only accepts numerical input. it should return the string, "input must be a number," if bad input has been submitted.
+console.assert(isNegative(20) === true);
+console.assert(isNegative(9999999) === false);
+// // modify isNegative() so that it only accepts numerical input. it should return the string, "input must be a number," if bad input has been submitted.
 
 // write a function called isEven() that tells whether a number is even or not. 
 
