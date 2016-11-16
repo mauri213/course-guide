@@ -1,7 +1,6 @@
 // EXERCISE 1 (build an array of objects from an array of strings)
 // ------------------------
 // Convert an array of strings into an array of objects.
-​
 // eg. result = [
 //  {firstName: 'Chuck', lastName: 'Norris'}
 //  ...
