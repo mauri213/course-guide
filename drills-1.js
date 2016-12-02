@@ -67,24 +67,92 @@ function firstShallBeLast(string) {
 console.assert(firstShallBeLast('turtles') === 'turtlest');
 console.assert(firstShallBeLast('eric') === 'erice');
 // write a function called secondToLast(). it should return the second-to-last element of a string or array.
- arr = ["j", "o", "n", "e", "s"];
- function secondToLast() { 
- 	return arr.length - 1;
+ arr = ['r', 'o', 'b', 'e', 'r', 't'];
+ function secondToLast(array) { 
+ 	return array[arr.length - 2];
  }
- console.assert(secondToLast('jones') === 'e');
+ console.assert(secondToLast(arr) === 'r');
 // write a function called hasX(). it should take as input a string, and it should return true if the string contains the character 'x', and false if it does not.
+function hasX(string) {
+	if(string.includes('x')) {
+		return true;
+	} else {
+		return false;
+	}
+}
+console.assert(hasX("blahxblah") === true);
+console.assert(hasX("somexwordxthatxhasxinit") === true);
 // write a function called hasEl(). it should take two inputs: a string and a character. it should return true if the string contains the character, and false if it does not. if you get it right, try the function on an array and a potential array element instead. does it still work?
-// write a function called incrementEach(). it should take as input an array of numbers and return a new array that contains each number from the input array, increased by one. 
+function hasEl(string, character) {
+	if(string = string + character) {
+		return true;
+	} else {
+		return false;
+	}
+}
+console.assert(hasEl("hello" + "hello") === true);
+console.assert(hasEl("cool" + "coolness") === true);
+// write a function called incrementEach(). 
+// it should take as input an array of numbers and return a new array that contains each number from the input array, increased by one. 
+// var arr = [1, 2, 3, 4, 5];
+// function incrementEach(array) {
+// 	return array[array.length++];
+// }
+// console.assert(incrementEach(arr) === [2, 3, 4, 5, 6]);
 // write a function called doubleAll(). it should take as input an array of numbers and return a new array that contains each number from the input array, doubled. 
+var arr = [1, 2, 3, 4, 5];
+
+function doubleAll(array) {
+	return array.length * 2;
+}
+console.assert(doubleAll(arr) === [2, 4, 6, 8, 10]);
 // write a function called getFirstLetterCaps(). it should take as input a string, and it should return a capitalized version of the string's first character.
+// function getFirstLetterCaps(string) {
+// 	return string[0].toUpperCase();
+// }
+// console.assert(getFirstLetterCaps("mauricio") === "Mauricio");
 // write a function called capitalizeWord(). it should take as input a string, and return a copy of that string with the first character capitalized. 
+// function capitalizeWord(string) {
+// 	return string[0].toUpperCase() + string.slice();
+// }
+
+// console.assert(capitalizeWord("mauricio") === "Mauricio");
 // write a function called capitalizeAllWords(). it should take as input an array of strings, and it should return a new array where all the words have been capitalized. HINT: use your capitalizeWord() function from above. 
+function capitalizeWord(string) {
+	return string.toUpperCase();
+}
+console.assert(capitalizeWord("orange") === "ORANGE");
+console.assert(capitalizeWord("dodgerblue") === "DODGERBLUE");	
 // write a function called arrayToString(). it should take as input an array, and it should concatenate all of the array's elements into one big string, and then return that string. 
+// function arrayToString(array) {
+// 	var arr = ["Mauricio", "Orozco"];
+// 	return arr.concat();
+// }
+// console.assert(arrayToString(""))
 // write a function called shortiesOnly(). taking as input an array of strings, it should return a new array containing only those strings with fewer than four characters. 
+// function shortiesOnly(array) {
+
+// }
 // write a function called reverseIt(). it should take as input a string or array (remember that we can often treat them the same way), and it should return a reversed version of that input. 
+function reverseIt(string) {
+	return string.split('').reverse().join('');
+}
+console.assert(reverseIt("hi") === "ih");
+console.assert(reverseIt("egnaro") === "orange");
 // write a function called getValue(). it should take two inputs: an object and a key. it should return the corresponding value for that key within the object. keep in mind that this should be a one-line function. no more than two. 
+// function getValue(object, key) {
+// 	return object.hasOwnProperty(key) ? obj[key];
+// }
+// console.assert(getValue("");
 // write a function called getAllValues(). it should take as input an object, and it should return the values of all the keys in the object. 
+// function getAllValues(object) {
+// 	return object.value;
+// }
+// console.assert(getAllValues("jones") === "jones");
 // write a function called addProp(). It should take three inputs: an object, a property name, and a value. It should return the original object, plus a new key-value pair corresponding to the input.
+// function addProp(object, name, value) {
+// 	return object + 
+// }
 // write a new version of addProp() that only takes two inputs: an object, and a second object containing a single key-value pair. this key-value pair should take the place of the second and third inputs in the above problem. e.g.:
 	// var usrObj = {name: 'linus odoyle', age:10, email:'odoylerules@yahoo.com'}
 	// var newObj = addProp(usrObj,{hometown:'new orleans'})
@@ -95,7 +163,16 @@ console.assert(firstShallBeLast('eric') === 'erice');
 		// then newObj should contain even more data:
 		// {name: 'linus odoyle', age:10, email:'odoylerules@yahoo.com', hometown:'new orleans', hobby:'bullying'}
 // write a function called getKeys(). it should take as input an object, and it should return the names of all the keys (properties) of the object.
+// function getKeys(object) {
+
+// }
 // write a function called addPropAll(). it should take three inputs: an array of objects, a property name, and a value. it should return a new array of objects, where each object has been supplemented with the key-value pair from the input. 
+// function addPropAll() {
+
+// }
 // modify addPropAll() in the same way that you modified addProp above. it should take two inptus, an array of objects and a single object containing a single key-value pair. it should return a new array of objects, where each object has been supplemented with the key-value pair from the input.
 // write a function called logValues() that takes two inputs: an array of objects, and a property name. for each object in the array, it should log the value stored under the given property name within that object. 
+// function logValues() {
+
+// }
 // write a function called getSpecificValues() that takes two inputs: an array of objects, and a property name. it should return an array containing the value stored under that property name for each object. for example, getSpecificValues(booksArray,'author') should return an array containing the author of every book object in the array. 
