@@ -139,18 +139,18 @@ console.assert(getFirstLetterCaps("mauricio") === "Mauricio");
 console.assert(getFirstLetterCaps("Orozco") === "Orozco");
 
 // write a function called capitalizeWord(). it should take as input a string, and return a copy of that string with the first character capitalized. 
-// function capitalizeWord(string) {
-// 	return string = 'mauricio' + ' Mauricio';
-// }
+function capitalizeWord(string) {
+	return string + string.charAt(0).toUpperCase();
+}
 
-// console.assert(capitalizeWord('mauricio') === 'mauricio Mauricio');
+console.assert(capitalizeWord('mauricio') === 'mauricioMauricio');
 
 // write a function called capitalizeAllWords(). it should take as input an array of strings, and it should return a new array where all the words have been capitalized. HINT: use your capitalizeWord() function from above. 
-function capitalizeWord(string) {
-	return string.toUpperCase();
+function capitalizeAllWords(string) {
+	return string.toUpperCase();	
 }
-console.assert(capitalizeWord("orange") === "ORANGE");
-console.assert(capitalizeWord("dodgerblue") === "DODGERBLUE");	
+console.assert(capitalizeAllWords("orange") === "ORANGE");
+console.assert(capitalizeAllWords("dodgerblue") === "DODGERBLUE");	
 // write a function called arrayToString(). it should take as input an array, and it should concatenate all of the array's elements into one big string, and then return that string. 
 // function arrayToString(array) {
 // 	var arr = ["Mauricio", "Orozco"];
