@@ -110,6 +110,7 @@ console.assert(hasEl("cool" + "coolness") === true);
 // function incrementEach(array) {
 // 	return array[array.length++];
 // }
+// console.log(incrementEach(1, 2, 3, 4, 5));
 // console.assert(incrementEach(arr) === [2, 3, 4, 5, 6]);
 
 // write a function called doubleAll(). it should take as input an array of numbers and return a new array that contains each number from the input array, doubled. 
@@ -140,38 +141,46 @@ console.assert(getFirstLetterCaps("Orozco") === "Orozco");
 
 // write a function called capitalizeWord(). it should take as input a string, and return a copy of that string with the first character capitalized. 
 function capitalizeWord(string) {
-	return string + string.charAt(0).toUpperCase();
+	return string + ' ' + string.charAt(0).toUpperCase() + string.slice(1,8);
 }
-
-console.assert(capitalizeWord('mauricio') === 'mauricioMauricio');
+// console.log(capitalizeWord("mauricio")); 
+console.assert(capitalizeWord('mauricio') === 'mauricio Mauricio');
+console.assert(capitalizeWord('orozco') === 'orozco Orozco');
 
 // write a function called capitalizeAllWords(). it should take as input an array of strings, and it should return a new array where all the words have been capitalized. HINT: use your capitalizeWord() function from above. 
 function capitalizeAllWords(string) {
 	return string.toUpperCase();	
 }
 console.assert(capitalizeAllWords("orange") === "ORANGE");
-console.assert(capitalizeAllWords("dodgerblue") === "DODGERBLUE");	
-// write a function called arrayToString(). it should take as input an array, and it should concatenate all of the array's elements into one big string, and then return that string. 
-// function arrayToString(array) {
-// 	var arr = ["Mauricio", "Orozco"];
-// 	return arr.concat();
-// }
-// console.assert(arrayToString(""))
-// write a function called shortiesOnly(). taking as input an array of strings, it should return a new array containing only those strings with fewer than four characters. 
-// function shortiesOnly(array) {
+console.assert(capitalizeAllWords("dodgerblue") === "DODGERBLUE");
 
-// }
+// write a function called arrayToString(). it should take as input an array, and it should concatenate all of the array's elements into one big string, and then return that string. 
+function arrayToString(array) {
+	var catarr = ["Mauricio", "Orozco"];
+	return catarr.join();
+}
+// console.log(arrayToString("Mauricio", "Orozco"));
+
+// write a function called shortiesOnly(). taking as input an array of strings, it should return a new array containing only those strings with fewer than four characters. 
+function shortiesOnly(array) {
+ 	return array.length < 4;
+}
+// console.log(shortiesOnly("sim"));
+console.assert(shortiesOnly("joe") === true);
+console.assert(shortiesOnly("m") === true);
+
 // write a function called reverseIt(). it should take as input a string or array (remember that we can often treat them the same way), and it should return a reversed version of that input. 
 function reverseIt(string) {
 	return string.split('').reverse().join('');
 }
 console.assert(reverseIt("hi") === "ih");
 console.assert(reverseIt("egnaro") === "orange");
+
 // write a function called getValue(). it should take two inputs: an object and a key. it should return the corresponding value for that key within the object. keep in mind that this should be a one-line function. no more than two. 
-// function getValue(object, key) {
-// 	return object.hasOwnProperty(key) ? obj[key];
-// }
-// console.assert(getValue("");
+function getValue(object, key) {
+	return object.hasOwnProperty(key) ? obj[key];
+}
+console.assert(getValue("");
 // write a function called getAllValues(). it should take as input an object, and it should return the values of all the keys in the object. 
 // function getAllValues(object) {
 // 	return object.value;
