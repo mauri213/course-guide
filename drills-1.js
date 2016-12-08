@@ -160,6 +160,7 @@ function arrayToString(array) {
 	return catarr.join();
 }
 // console.log(arrayToString("Mauricio", "Orozco"));
+console.assert(arrayToString("Mauricio", "Orozco") === "Mauricio,Orozco");
 
 // write a function called shortiesOnly(). taking as input an array of strings, it should return a new array containing only those strings with fewer than four characters. 
 function shortiesOnly(array) {
@@ -177,19 +178,50 @@ console.assert(reverseIt("hi") === "ih");
 console.assert(reverseIt("egnaro") === "orange");
 
 // write a function called getValue(). it should take two inputs: an object and a key. it should return the corresponding value for that key within the object. keep in mind that this should be a one-line function. no more than two. 
+var batman = {
+	firstName: "Bruce",
+	lastName: "Wayne"
+};
+
 function getValue(object, key) {
-	return object.hasOwnProperty(key) ? obj[key];
+  for (var b in object) {
+    if (b == key)
+      return object[b];
+  }
 }
-console.assert(getValue("");
+
+var dude = getValue(batman, "firstName");
+console.log(dude);
+// console.assert(getValue() === );
+// console.assert(getValue() === );
+
 // write a function called getAllValues(). it should take as input an object, and it should return the values of all the keys in the object. 
-// function getAllValues(object) {
-// 	return object.value;
-// }
-// console.assert(getAllValues("jones") === "jones");
+var spiderman = {
+	firstName: "Peter",
+	lastName: "Parker",
+	favoriteFood: "Pizza"
+};
+
+function getAllValues(object) {
+      return object;
+  }
+
+var insect = getAllValues(spiderman);
+console.log(insect);
+// console.assert(getAllValues() === );
+
 // write a function called addProp(). It should take three inputs: an object, a property name, and a value. It should return the original object, plus a new key-value pair corresponding to the input.
+// var smiths {
+// 	firstName: "Steven",
+// 	lastName: "Morrissey",
+// 	job: "Lead Singer"
+// };
+
 // function addProp(object, name, value) {
-// 	return object + 
+	
 // }
+
+// var favoriteBand = addProp(smiths, "");
 // write a new version of addProp() that only takes two inputs: an object, and a second object containing a single key-value pair. this key-value pair should take the place of the second and third inputs in the above problem. e.g.:
 	// var usrObj = {name: 'linus odoyle', age:10, email:'odoylerules@yahoo.com'}
 	// var newObj = addProp(usrObj,{hometown:'new orleans'})
@@ -199,18 +231,19 @@ console.assert(getValue("");
 		// var newObj = addProp(newObj,{hobby:'bullying'})
 		// then newObj should contain even more data:
 		// {name: 'linus odoyle', age:10, email:'odoylerules@yahoo.com', hometown:'new orleans', hobby:'bullying'}
+
 // write a function called getKeys(). it should take as input an object, and it should return the names of all the keys (properties) of the object.
 // function getKeys(object) {
 //   return
 // }
+
 // write a function called addPropAll(). it should take three inputs: an array of objects, a property name, and a value. it should return a new array of objects, where each object has been supplemented with the key-value pair from the input. 
 // function addPropAll() {
-
 // }
+
 // modify addPropAll() in the same way that you modified addProp above. it should take two inptus, an array of objects and a single object containing a single key-value pair. it should return a new array of objects, where each object has been supplemented with the key-value pair from the input.
 // write a function called logValues() that takes two inputs: an array of objects, and a property name. for each object in the array, it should log the value stored under the given property name within that object. 
 // function logValues() {
-
 // }
 // write a function called getSpecificValues() that takes two inputs: an array of objects, and a property name. it should return an array containing the value stored under that property name for each object. for example, getSpecificValues(booksArray,'author') should return an array containing the author of every book object in the array. 
 // function getSpecificValues() {
