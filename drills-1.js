@@ -221,30 +221,48 @@ var favoriteBand = function addProp(object, propertyName, value) {
 	return object[propertyName];
 };
 console.log(smiths);
+//console.assert(addProp() === );
+
 // write a new version of addProp() that only takes two inputs: an object, and a second object containing a single key-value pair. this key-value pair should take the place of the second and third inputs in the above problem. e.g.:
-	// var usrObj = {name: 'linus odoyle', age:10, email:'odoylerules@yahoo.com'}
-	// var newObj = addProp(usrObj,{hometown:'new orleans'})
-	// newObj should look like this: 
-	// {name: 'linus odoyle', age:10, email:'odoylerules@yahoo.com',hometown:'new orleans'}
-	// if i run:
-		// var newObj = addProp(newObj,{hobby:'bullying'})
-		// then newObj should contain even more data:
-		// {name: 'linus odoyle', age:10, email:'odoylerules@yahoo.com', hometown:'new orleans', hobby:'bullying'}
+// 	var usrObj = {name: 'linus odoyle', age:10, email:'odoylerules@yahoo.com'}
+// 	var newObj = addProp(usrObj,{hometown:'new orleans'})
+// 	newObj should look like this: 
+// 	{name: 'linus odoyle', age:10, email:'odoylerules@yahoo.com',hometown:'new orleans'}
+// 	if i run:
+// 		var newObj = addProp(newObj,{hobby:'bullying'})
+// 		then newObj should contain even more data:
+// 		{name: 'linus odoyle', age:10, email:'odoylerules@yahoo.com', hometown:'new orleans', hobby:'bullying'}
+// var usrObj = {name: 'linus odoyle', age: 10, email: 'odoylerules@yahoo.com'}
+// var newObj = addProp(usrObj, {hometown:'new orleans'})
+
+// var doingThisAgain = function addProp(object,)
 
 // write a function called getKeys(). it should take as input an object, and it should return the names of all the keys (properties) of the object.
-// function getKeys(object) {
-//   return
-// }
+var cubanFood = {
+	0: "Rabo Encendido", 1: "Sandwich Cubano", 2: "Ropa Vieja"
+};
+
+function getKeys(object) {
+  return object;
+}
+
+var paMe = getKeys(cubanFood);
+console.log(paMe);
 
 // write a function called addPropAll(). it should take three inputs: an array of objects, a property name, and a value. it should return a new array of objects, where each object has been supplemented with the key-value pair from the input. 
-// function addPropAll() {
+// function addPropAll([{}], property name, value) {
 // }
 
 // modify addPropAll() in the same way that you modified addProp above. it should take two inptus, an array of objects and a single object containing a single key-value pair. it should return a new array of objects, where each object has been supplemented with the key-value pair from the input.
-// write a function called logValues() that takes two inputs: an array of objects, and a property name. for each object in the array, it should log the value stored under the given property name within that object. 
-// function logValues() {
+// function addPropAll([{}], {}) {
+
 // }
+
+// write a function called logValues() that takes two inputs: an array of objects, and a property name. for each object in the array, it should log the value stored under the given property name within that object. 
+// function logValues([{}], property name) {
+// }
+
 // write a function called getSpecificValues() that takes two inputs: an array of objects, and a property name. it should return an array containing the value stored under that property name for each object. for example, getSpecificValues(booksArray,'author') should return an array containing the author of every book object in the array. 
-// function getSpecificValues() {
+// function getSpecificValues([{}], property name) {
 
 // }
