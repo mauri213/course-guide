@@ -211,17 +211,16 @@ console.log(insect);
 // console.assert(getAllValues() === );
 
 // write a function called addProp(). It should take three inputs: an object, a property name, and a value. It should return the original object, plus a new key-value pair corresponding to the input.
-// var smiths {
-// 	firstName: "Steven",
-// 	lastName: "Morrissey",
-// 	job: "Lead Singer"
-// };
+var smiths = {
+	firstName: "Steven",
+	lastName: "Morrissey",
+	job: "Lead Singer"
+};
 
-// function addProp(object, name, value) {
-	
-// }
-
-// var favoriteBand = addProp(smiths, "");
+var favoriteBand = function addProp(object, propertyName, value) {
+	return object[propertyName];
+};
+console.log(smiths);
 // write a new version of addProp() that only takes two inputs: an object, and a second object containing a single key-value pair. this key-value pair should take the place of the second and third inputs in the above problem. e.g.:
 	// var usrObj = {name: 'linus odoyle', age:10, email:'odoylerules@yahoo.com'}
 	// var newObj = addProp(usrObj,{hometown:'new orleans'})
